@@ -1,4 +1,3 @@
-import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
 import { Button } from '../ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -21,13 +20,13 @@ const PostCard = ({ post}:any) => {
         <button 
           className="flex items-center space-x-2 text-blue-500 hover:text-blue-700"
         >
-          <FaThumbsUp />
+          Likes
           <span>{!post?.likes?.length?"0":post?.likes?.length}</span>
         </button>
         <button 
           className="flex items-center space-x-2 text-red-500 hover:text-red-700"
         >
-          <FaThumbsDown />
+          DisLikes
           <span>{!post?.dislikes?.length?"0":post?.dislikes?.length}</span>
         </button>
        <Link href={`post/detail/${post?._id}`}><Button>
